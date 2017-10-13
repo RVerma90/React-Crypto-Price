@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-		axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,IOT,XRP,LTC,OMG,NEO&tsyms=BTC,GBP,USD,EUR')
+		axios.get('https://api.coinmarketcap.com/v1/ticker/?limit=10')
 			.then(res => {
 				const cryptos = res.data;
 				console.log(cryptos);
@@ -24,13 +24,27 @@ class App extends Component {
   render() {
     return (
 			<div className="App">
+					<div id="crypto-title">
+						<span className="title">CRYPTO WORLD BEST PLAYERS OF THE DAY</span>
+					</div>
+					<div id="crypto-container">
+						<span className="left">RANK</span>
+						<span className="prices">PLAYER NAME</span>
+						<span className="prices">SCORE</span>
+						<span className="prices">UNDERDOG SCORE</span>
+						<span className="prices">ALL TIME WINS</span>
+					</div>
+
 				{Object.keys(this.state.cryptos).map((key) => (
 
+
 					<div id="crypto-container">
-						<span className="left">{key}</span>
-						<span className="prices">${this.state.cryptos[key].USD}</span>
-						<span className="prices">£{this.state.cryptos[key].GBP}</span>
-						<span className="prices">€{this.state.cryptos[key].EUR}</span>
+						<span className="left">{this.state.cryptos[key].rank}</span>
+						<span className="prices">{this.state.cryptos[key].symbol}</span>
+						<span className="prices">{this.state.cryptos[key].market_cap_usd}</span>
+						<span className="prices">{this.state.cryptos[key].total_supply}</span>
+						<span className="prices">{this.state.cryptos[key].price_usd}</span>
+						<button className="retroButton">GET</button>
 					</div>
 
 				))}
@@ -39,5 +53,5 @@ class App extends Component {
     );
   }
 }
-
+ 
 export default App;

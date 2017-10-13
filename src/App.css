@@ -1,7 +1,61 @@
 body {
-  /* background: #121242; */
-  background: #010131;
+  background: url(http://www.powerpointhintergrund.com/download/bit-wallpapers-you--ll-totally-want-for-your-android-androidguys-8239);
+  /* background: #010131; */
   padding: 50px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+@keyframes colorchange1
+{
+  0%   {background-color: rgb(12, 3, 133);}
+  50%  {background-color: #04044d}
+  100% {background-color: rgb(12, 3, 133);}
+}
+
+@-webkit-keyframes colorchange1 /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background-color: rgb(12, 3, 133);}
+  50%  {background-color: #04044d}
+  100% {background-color: rgb(12, 3, 133);}
+}
+
+@keyframes colorchange2
+{
+  0%   {background-color: rgb(114, 3, 3);}
+  50%  {background-color: rgb(83, 17, 13);}
+  100%   {background-color: rgb(114, 3, 3);}
+}
+
+@-webkit-keyframes colorchange2 /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background-color: rgb(114, 3, 3);}
+  50%  {background-color: rgb(83, 17, 13);}
+  100%   {background-color: rgb(114, 3, 3);}
+}
+
+@keyframes colorchange3
+{
+  0%   {background-color: rgb(2, 129, 12);}
+  50%  {background-color: rgb(14, 54, 1);}
+  100%   {background-color: rgb(2, 129, 12);}
+}
+
+@-webkit-keyframes colorchange3 /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background-color: rgb(2, 129, 12);}
+  50%  {background-color: rgb(14, 54, 1);}
+  100%   {background-color: rgb(2, 129, 12);}
+}
+
+div#crypto-title {
+  background: #232343;
+  width: 70%;
+  margin: 0 auto 15px auto;
+  padding: 1em;
+  box-shadow:  1px 1px 0 #676777;
+  font-size: 30px;
+  animation: colorchange1 4s linear infinite;
+  -webkit-animation: colorchange1 4s linear infinite;  
 }
 
 div#crypto-container {
@@ -10,18 +64,31 @@ div#crypto-container {
   margin: 0 auto 5px auto;
   padding: 1em;
   box-shadow:  1px 1px 0 #676777;
+  animation: colorchange2 4s linear infinite;
+  -webkit-animation: colorchange2 4s linear infinite;
 }
 
 span {
   color: white;
   display: inline-block;
+  font-size: 15px;
 }
 
 span.left {
   font-weight: bold;
-  width: 200px;
+  width: 75px;
 }
 
 span.prices {
   width: 20%;
+}
+
+button.retroButton {
+  background-color: rgb(60, 148, 38);
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  float: right;
+  animation: colorchange3 4s linear infinite;
+  -webkit-animation: colorchange3 4s linear infinite;  
 }

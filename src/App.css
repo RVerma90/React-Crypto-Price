@@ -92,3 +92,12 @@ button.retroButton {
   animation: colorchange3 4s linear infinite;
   -webkit-animation: colorchange3 4s linear infinite;  
 }
+
+.buttonText {
+  color: red;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

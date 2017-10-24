@@ -19,6 +19,7 @@ class App extends Component {
 				console.log(cryptos);
 				this.setState({cryptos: cryptos});
 			})
+			console.log(this.state.cryptos);
 	}
   
   render() {
@@ -44,9 +45,8 @@ class App extends Component {
 						<span className="prices">{this.state.cryptos[key].market_cap_usd}</span>
 						<span className="prices">{this.state.cryptos[key].total_supply}</span>
 						<span className="prices">{this.state.cryptos[key].price_usd}</span>
-						<button className="retroButton">GET</button>
+						<button className="retroButton"><a href={"https://coinmarketcap.com/currencies/" + this.state.cryptos[key].id}>GET</a></button>
 					</div>
-
 				))}
 
 			</div>
